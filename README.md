@@ -1,7 +1,7 @@
-# Cronjob serive on EOS blockchain
+# Cronjob service on EOS blockchain
 **Simple:** deploy the contract, register your ACTIONS of your other contracts with times when they should be executed and they will be repeatably called automatically. Just like a cronjob...  
 
-**How it works**: recursive deferred transactions.
+**How it works**: Using recursive deferred transactions.
 
 **Note:** The tutorial and code is written for eosio-cpp version 1.4.1. Make sure you have the right version when compiling. You will also require cleos on a Linux environment.
 

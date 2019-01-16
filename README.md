@@ -7,7 +7,7 @@
 
 ## Deployment
 This requires some basic knowledge about setting up accounts and deploying a contract. See a tutorial here for example:  
-https://hackernoon.com/how-to-create-and-deploy-your-own-eos-token-1f4c9cc0eca1 or https://infinitexlabs.com/eos-development-tutorial-part-1/
+[first steps with eos](https://hackernoon.com/how-to-create-and-deploy-your-own-eos-token-1f4c9cc0eca1) or [first contract](https://infinitexlabs.com/eos-development-tutorial-part-1/)
 
 In the following we use 2 accounts. *jobservice* which is where the cronjob service is deployed and *mycontract* which is where the contract with the actions sits.
 First we need to build the contract with EOS CDT.  
@@ -49,5 +49,5 @@ It is difficult to store arguments of your ACTION in a table due to unknown type
 Currently you can register a starttime and repeat time [s]. You cannot schedule the 1 day of the month or year. Also there might be an upper limit on deffered transactions. Be careful.
 
 ### Feedback on assertion error, timeout, resource limits, or other errors when running the actions
-Feedback is tricky. As mentioned in this [issue](https://eosio.stackexchange.com/questions/3291/how-to-find-out-if-deferred-transaction-was-executed). In the jobservice you can check against the last executed flag and periodically make sure that everything is ok. The *mycontract* needs to provide resources for the called ACTIONS.
+Feedback is tricky. As mentioned in this [issue](https://eosio.stackexchange.com/questions/3291/how-to-find-out-if-deferred-transaction-was-executed). In the jobservice you can check against the last executed flag and periodically make sure that everything is ok. The *mycontract* needs to provide resources for the called ACTIONS.  
 ```cleos get table jobservice mycontract cronjobs```

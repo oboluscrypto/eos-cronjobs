@@ -5,6 +5,8 @@
 
 **Note:** The tutorial and code is written for eosio-cpp version 1.4.1. Make sure you have the right version when compiling. You will also require cleos on a Linux environment.
 
+**Thanks:** If you use this code or learn something please thank Obolus in your code and also on [twitter](https://twitter.com/ObolusCrypto/status/1085450779052261377).
+
 ## Deployment
 This requires some basic knowledge about setting up accounts and deploying a contract. See a tutorial here for example:  
 [first steps with eos](https://hackernoon.com/how-to-create-and-deploy-your-own-eos-token-1f4c9cc0eca1) or [first contract](https://infinitexlabs.com/eos-development-tutorial-part-1/).

@@ -7,11 +7,11 @@
 
 ## Deployment
 This requires some basic knowledge about setting up accounts and deploying a contract. See a tutorial here for example:  
-[first steps with eos](https://hackernoon.com/how-to-create-and-deploy-your-own-eos-token-1f4c9cc0eca1) or [first contract](https://infinitexlabs.com/eos-development-tutorial-part-1/)
+[first steps with eos](https://hackernoon.com/how-to-create-and-deploy-your-own-eos-token-1f4c9cc0eca1) or [first contract](https://infinitexlabs.com/eos-development-tutorial-part-1/).
 
 In the following we use 2 accounts. *jobservice* which is where the cronjob service is deployed and *mycontract* which is where the contract with the actions sits.
 First we need to build the contract with EOS CDT.  
-```eosio-cpp -abigen cronjob.cpp -o cronjob.wasm && cleos set contract colin.job ../cronjob/```
+```eosio-cpp -abigen cronjob.cpp -o cronjob.wasm && cleos set contract jobservice ../cronjob/```
 
 Next we need to give permissions to the *jobservice* to run functions on *mycontract*.  
 ```cleos set account permission mycontract active '{"threshold": 1,"keys": [{"key": "EOS5bUj...YOUR.PUBLIC.KEY.HERE...AQq","weight": 1}], "accounts": [{"permission":{"actor":"jobservice","permission":"eosio.code"},"weight":1}]}' owner -p mycontract@owner```

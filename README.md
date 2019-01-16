@@ -32,7 +32,7 @@ This requires permissions of *mycontract* or *jobservice*. For changing, remove 
 ```
 cleos push action jobservice rmalljobs '["mycontract"]' -p mycontract@active
 ```
-With rmjob you can also delete a specific job.
+With `rmjob` you can also delete a specific job by jobid.
 
 
 ## Debug switch.
@@ -50,4 +50,5 @@ Currently you can register a starttime and repeat time [s]. You cannot schedule 
 
 ### Feedback on assertion error, timeout, resource limits, or other errors when running the actions
 Feedback is tricky. As mentioned in this [issue](https://eosio.stackexchange.com/questions/3291/how-to-find-out-if-deferred-transaction-was-executed). In the jobservice you can check against the last executed flag and periodically make sure that everything is ok. The *mycontract* needs to provide resources for the called ACTIONS.  
+
 ```cleos get table jobservice mycontract cronjobs```
